@@ -28,7 +28,7 @@ unlist(lapply(list(mean = mean, median = median), function(f) f(day_steps$aver_s
 ## What is the average daily activity pattern?
 ```{r daily_pattern, echo = TRUE}
 interval_steps <- activity[, .(aver_steps = mean(steps, na.rm = TRUE)), by = interval]
-plot(interval_steps, type ='l', las = 1)
+plot(interval_steps, type ='l', las = 1, ylab = 'Number of steps')
 interval_steps[which.max(aver_steps)]
 ```
 
