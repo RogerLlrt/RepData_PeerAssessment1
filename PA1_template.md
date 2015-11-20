@@ -62,7 +62,7 @@ unlist(lapply(list(mean = mean, median = median), function(f) f(day_steps$aver_s
 
 ```r
 interval_steps <- activity[, .(aver_steps = mean(steps, na.rm = TRUE)), by = interval]
-plot(interval_steps, type ='l', las = 1)
+plot(interval_steps, type ='l', las = 1, ylab = 'Number of steps')
 ```
 
 ![](PA1_template_files/figure-html/daily_pattern-1.png) 
